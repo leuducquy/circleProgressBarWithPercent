@@ -35,9 +35,9 @@
     
     CAShapeLayer *w = [CAShapeLayer layer];
     [[self layer] addSublayer:w];
-    [w setStrokeColor:[[UIColor redColor] CGColor]];
+    [w setStrokeColor:[[UIColor lightGrayColor] CGColor]];
     [w setFillColor:[[UIColor clearColor] CGColor]];
-//    [w setShadowColor:[[UIColor darkGrayColor] CGColor]];
+    [w setShadowColor:[[UIColor darkGrayColor] CGColor]];
 //    [w setShadowRadius:2];
 //    [w setShadowOpacity:1];
 //    [w setShadowOffset:CGSizeZero];
@@ -56,7 +56,7 @@
     
     [self setBackgroundColor:[UIColor clearColor]];
     [self setWellThickness:15.0];
-    [self setColor:[UIColor colorWithRed:0.5 green:0.5 blue:0.0 alpha:1]];
+    [self setColor:(__bridge UIColor * _Nullable)((__bridge CGColorRef _Nullable)([UIColor colorWithRed:87/255 green:136/255 blue:156/255 alpha:1]))];
     [self setProgress:_progress];
 
 }
@@ -84,20 +84,21 @@
 
     percentageLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width/2-25,
                                                                self.frame.size.height/2-25,
-                                                               50,
-                                                               50)];
+                                                               25,
+                                                               25)];
     
     percentageLabel.textColor = [UIColor grayColor];
     [percentageLabel setText:msg];
     
+    
     [percentageLabel setTextAlignment:NSTextAlignmentCenter];
     [percentageLabel setBackgroundColor:[UIColor clearColor]];
-    [self addSubview:percentageLabel];
+   // [self addSubview:percentageLabel];
     [self changeValue:_progress];
 }
 #pragma mark - changeValue
 -(void)changeValue:(float)val{
-    [percentageLabel setText:[NSString stringWithFormat:@"%.0f%@",_progress*kPer,@"%"]];
+    [percentageLabel setText:[NSString stringWithFormat:@"%0.f%@",val,@"%"]];
 }
 
 - (void)setImage:(UIImage *)image
@@ -133,7 +134,7 @@
     [CATransaction begin];
     if(animated) {
         float delta = fabs(_progress*2 - currentProgress);
-        [CATransaction setAnimationDuration:MAX(0.2, delta * 1.0)];
+        [CATransaction setAnimationDuration:MAX(0.2, delta * 0.3)];
     } else {
         [CATransaction setDisableActions:YES];
     }
@@ -179,7 +180,7 @@
     UIBezierPath *outerPath1 = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(outer), CGRectGetMidY(outer))
                                                               radius:[self radius]
                                                           startAngle:M_PI
-                                                            endAngle:(2.0 * M_PI - M_PI)
+                                                            endAngle:(1.0 * M_PI + M_PI)
                                                            clockwise:YES];
     
     [[self spinLayer] setPath:[outerPath1 CGPath]];

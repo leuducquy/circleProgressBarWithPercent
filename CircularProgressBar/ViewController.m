@@ -26,18 +26,20 @@
 //    m_CircularView.percent = 100;
 //    [self.view addSubview:m_CircularView];
     [[self spinnerView] setLabelWithPercentage:@"0 %"];
+   
     [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(spinit:) userInfo:nil repeats:YES];
 }
 
 - (void)spinit:(NSTimer *)timer
 {
-    static float prog = 0.0;
-    prog += 0.03;
-    if(prog >= 1.0) {
-        prog = 1.0;
+    static float prog = 0;
+    prog += 3;
+    if(prog >= 50) {
+        prog = 50;
         [timer invalidate];
     }
     [[self spinnerView] setProgress:prog animated:YES];
+     self.percentLabel.text = self.spinnerView.percentageLabel.text;
     
 }
 

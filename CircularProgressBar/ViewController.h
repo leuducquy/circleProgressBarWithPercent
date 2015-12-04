@@ -11,5 +11,6 @@
 
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet STKSpinnerView *spinnerView;
+@property (weak, nonatomic) IBOutlet UILabel *percentLabel;
 
 @end
