@@ -1,23 +1,16 @@
-//
-//  STKSpinnerView.h
-//  Spyndle
-//
-//  Created by Joe Conway on 4/19/13.
-//
-
 #import <UIKit/UIKit.h>
 
 @interface STKSpinnerView : UIView
-
 @property (nonatomic) float progress;
 @property (nonatomic, strong) UIImage *image;
-@property (nonatomic) float wellThickness;
+@property (nonatomic) float circleThickness;
 @property (nonatomic, strong) UIColor *color;
-@property (nonatomic,strong) UILabel *percentageLabel;
-
+@property (nonatomic,strong) UILabel *percentLabel;
+@property (nonatomic, strong) CAShapeLayer *firstCircleLayer;
+@property (nonatomic, strong) CAShapeLayer *secondCircleLayer;
 - (void)setProgress:(float)progress animated:(BOOL)animated;
 
--(void)setLabelWithPercentage:(NSString *)msg;
+-(void)setLabelWithPercent:(NSString *)msg;
 
 
 @end

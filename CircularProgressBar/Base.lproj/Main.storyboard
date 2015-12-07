@@ -17,13 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-Op-JqQ" customClass="STKSpinnerView">
-                                <rect key="frame" x="85" y="176" width="150" height="150"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Sided Progressbar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LO-Qc-TVh">
+                                <rect key="frame" x="0.0" y="100" width="320" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gwf-fl-0Ab" customClass="STKSpinnerView">
+                                <rect key="frame" x="182" y="133" width="80" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBz-3v-S3E">
-                                        <rect key="frame" x="0.0" y="64" width="150" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4g0-26-6wQ">
+                                        <rect key="frame" x="0.0" y="28" width="80" height="24"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -31,36 +38,79 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="RBz-3v-S3E" firstAttribute="leading" secondItem="g0P-Op-JqQ" secondAttribute="leading" id="58m-kT-hEQ"/>
-                                    <constraint firstItem="RBz-3v-S3E" firstAttribute="top" secondItem="g0P-Op-JqQ" secondAttribute="top" constant="64" id="ZMK-cq-kcr"/>
-                                    <constraint firstAttribute="bottom" secondItem="RBz-3v-S3E" secondAttribute="bottom" constant="65" id="kwa-9N-7MK"/>
-                                    <constraint firstAttribute="trailing" secondItem="RBz-3v-S3E" secondAttribute="trailing" id="sbu-tk-19B"/>
+                                    <constraint firstItem="4g0-26-6wQ" firstAttribute="leading" secondItem="gwf-fl-0Ab" secondAttribute="leading" id="3bG-8p-jrb"/>
+                                    <constraint firstAttribute="bottom" secondItem="4g0-26-6wQ" secondAttribute="bottom" constant="28" id="Bwk-uG-Ty6"/>
+                                    <constraint firstAttribute="trailing" secondItem="4g0-26-6wQ" secondAttribute="trailing" id="OaE-YV-Xgk"/>
+                                    <constraint firstAttribute="width" constant="80" id="jbR-Nn-J9O"/>
+                                    <constraint firstItem="4g0-26-6wQ" firstAttribute="top" secondItem="gwf-fl-0Ab" secondAttribute="top" constant="28" id="rhA-HU-Huz"/>
+                                    <constraint firstAttribute="height" constant="80" id="uiN-wC-nPy"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Sided Progressbar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LO-Qc-TVh">
-                                <rect key="frame" x="0.0" y="100" width="320" height="31"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oS7-pn-ONC" customClass="STKSpinnerView">
+                                <rect key="frame" x="175" y="259" width="80" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcb-Im-g3L">
+                                        <rect key="frame" x="0.0" y="28" width="80" height="24"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="39O-Dq-7GX"/>
+                                    <constraint firstItem="bcb-Im-g3L" firstAttribute="top" secondItem="oS7-pn-ONC" secondAttribute="top" constant="28" id="0vM-rC-mKw"/>
+                                    <constraint firstItem="bcb-Im-g3L" firstAttribute="leading" secondItem="oS7-pn-ONC" secondAttribute="leading" id="5h0-Hl-8RV"/>
+                                    <constraint firstAttribute="bottom" secondItem="bcb-Im-g3L" secondAttribute="bottom" constant="28" id="8l0-7q-uGB"/>
+                                    <constraint firstAttribute="width" constant="80" id="SSj-3q-NXf"/>
+                                    <constraint firstAttribute="trailing" secondItem="bcb-Im-g3L" secondAttribute="trailing" id="ehs-7K-JOM"/>
+                                    <constraint firstAttribute="height" constant="80" id="kDI-P5-hkn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIn-gm-Jyc" customClass="STKSpinnerView">
+                                <rect key="frame" x="35" y="260" width="80" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdR-gO-o1z">
+                                        <rect key="frame" x="0.0" y="28" width="80" height="24"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LdR-gO-o1z" secondAttribute="trailing" id="932-u2-ZUJ"/>
+                                    <constraint firstAttribute="height" constant="80" id="D4c-Mo-TIV"/>
+                                    <constraint firstAttribute="width" constant="80" id="WVB-Vi-m4J"/>
+                                    <constraint firstItem="LdR-gO-o1z" firstAttribute="leading" secondItem="YIn-gm-Jyc" secondAttribute="leading" id="o9f-sd-93D"/>
+                                    <constraint firstAttribute="bottom" secondItem="LdR-gO-o1z" secondAttribute="bottom" constant="28" id="s0R-Y8-G3H"/>
+                                    <constraint firstItem="LdR-gO-o1z" firstAttribute="top" secondItem="YIn-gm-Jyc" secondAttribute="top" constant="28" id="vij-HD-YMx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-Op-JqQ" customClass="STKSpinnerView">
+                                <rect key="frame" x="20" y="140" width="80" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="dcn-Bn-ZgZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="p5V-qC-gda"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="g0P-Op-JqQ" secondAttribute="trailing" constant="85" id="1eh-yZ-Fzj"/>
-                            <constraint firstItem="1LO-Qc-TVh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="EzP-WY-0Ms"/>
-                            <constraint firstItem="g0P-Op-JqQ" firstAttribute="top" secondItem="1LO-Qc-TVh" secondAttribute="bottom" constant="45" id="QKP-Pz-QvK"/>
-                            <constraint firstItem="1LO-Qc-TVh" firstAttribute="centerX" secondItem="g0P-Op-JqQ" secondAttribute="centerX" id="TlN-Z3-K4b"/>
-                            <constraint firstItem="g0P-Op-JqQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="85" id="j0v-hM-G0L"/>
-                            <constraint firstItem="XFh-jW-h4U" firstAttribute="top" secondItem="g0P-Op-JqQ" secondAttribute="bottom" constant="242" id="jY2-jC-XcN"/>
+                            <constraint firstAttribute="trailing" secondItem="1LO-Qc-TVh" secondAttribute="trailing" id="5nl-54-8MT"/>
+                            <constraint firstItem="g0P-Op-JqQ" firstAttribute="top" secondItem="1LO-Qc-TVh" secondAttribute="bottom" constant="19" id="5ty-Jk-rZA"/>
+                            <constraint firstItem="g0P-Op-JqQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="PUK-u2-g5o"/>
+                            <constraint firstItem="1LO-Qc-TVh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="XGp-a2-Fds"/>
+                            <constraint firstItem="1LO-Qc-TVh" firstAttribute="top" secondItem="YhI-13-wzb" secondAttribute="bottom" constant="80" id="laf-eY-Jvz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="percentLabel" destination="RBz-3v-S3E" id="4bc-d7-lxS"/>
                         <outlet property="spinnerView" destination="g0P-Op-JqQ" id="7o1-HR-S8F"/>
                     </connections>
                 </viewController>

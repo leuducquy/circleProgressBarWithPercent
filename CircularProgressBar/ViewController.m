@@ -1,4 +1,13 @@
 //
+//  STKSpinnerView.m
+//  Spyndle
+//
+//  Created by Joe Conway on 4/19/13.
+//
+
+#import "STKSpinnerView.h"
+#import <QuartzCore/QuartzCore.h>
+//
 //  ViewController.m
 //  CircularProgressBar
 //
@@ -20,38 +29,36 @@
 
 - (void)viewDidLoad
 {
-        // Init our view
+    // Init our view
     [super viewDidLoad];
-//    m_CircularView = [[CircularView alloc] initWithFrame:self.view.bounds];
-//    m_CircularView.percent = 100;
-//    [self.view addSubview:m_CircularView];
-    [[self spinnerView] setLabelWithPercentage:@"0 %"];
-   
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(spinit:) userInfo:nil repeats:YES];
+    //    m_CircularView = [[CircularView alloc] initWithFrame:self.spinnerView.bounds];
+    //    m_CircularView.percent = 100;
+    //    [self.view addSubview:m_CircularView];
+    [self.spinnerView  setLabelWithPercent:@"50"];
+    // [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(spinit:) userInfo:nil repeats:YES];
 }
 
 - (void)spinit:(NSTimer *)timer
 {
-    static float prog = 0;
-    prog += 3;
-    if(prog >= 50) {
-        prog = 50;
+    static float prog = 0.0;
+    prog += 0.03;
+    if(prog >= 0.7) {
+        prog = 0.7;
         [timer invalidate];
     }
     [[self spinnerView] setProgress:prog animated:YES];
-     self.percentLabel.text = self.spinnerView.percentageLabel.text;
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-        // Kick off a timer to count it down
-//    m_timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(decrementSpin) userInfo:nil repeats:YES];
+    // Kick off a timer to count it down
+    //    m_timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(decrementSpin) userInfo:nil repeats:YES];
 }
 
 - (void)decrementSpin
 {
-        // If we can decrement our percentage, do so, and redraw the view
+    // If we can decrement our percentage, do so, and redraw the view
     if (m_CircularView.percent > 0) {
         m_CircularView.percent = m_CircularView.percent - 1;
         [m_CircularView setNeedsDisplay];
@@ -69,3 +76,6 @@
 }
 
 @end
+
+
+
